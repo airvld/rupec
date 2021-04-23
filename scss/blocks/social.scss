@@ -1,0 +1,36 @@
+.social {
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-left: -20px;
+  }
+  &__icon {
+    margin-left: 20px;
+    svg {
+      width: 33px;
+      height: 33px;      
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__title {
+      text-align: right;
+    }
+    &__row {
+      justify-content: flex-end;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__title {
+      display: none;
+    }
+    &__icon {
+      svg {
+        width: 18px;
+        height: 18px; 
+      }
+    }
+  }
+}

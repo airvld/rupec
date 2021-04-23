@@ -1,0 +1,143 @@
+extends blocks/base.jade
+
+block title 
+	title Главная (шапка вариант 2)
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+include blocks/little-news.jade
+include blocks/big-news.jade
+include blocks/comment-news.jade
+include blocks/full-news.jade
+
+block content
+
+	.page
+
+		include blocks/header_v2.jade
+		
+		.content
+			.container.px-0
+
+				.home-s1
+					.row.row-cols-1.row-cols-lg-3
+						.col
+							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУР Дмитрием Коновым','4 часа назад')
+						.col
+							+little-news('Стратегии отрасли','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад')
+						.col
+							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера')
+
+				.home-s2
+					.row.row-cols-1.row-cols-md-2.row-cols-lg-3
+						.col
+							+big-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУР Дмитрием Коновым','4 часа назад','news-thumbnail_1.jpg')
+						.col
+							+comment-news('мнение','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад','portrait_1.jpg','Руслан Эдельгериев','Советник президента РФ по климату')
+						.col
+							+big-news('госрегулирование','Биржевая цена на суг обновила исторический максимум','11:25 / 4 МАРТА 2021','news-thumbnail_2.jpg')
+
+				.home-s3
+					+full-news
+
+				.home-s4 
+					.row.row-cols-1.row-cols-lg-2
+						.col
+							// subscribe
+							form(action="#").subscribe
+								.subscribe__title Подпишитесь на нашу e-mail рассылку!Отправляем новости по каждой рубрике один раз в месяц.
+								.subscribe__checkboxes
+									.subscribe__row 
+										input#subscribe_1(type="checkbox").subscribe__checkbox
+										label(for="subscribe_1").subscribe__checkbox-label
+										label(for="subscribe_1").subscribe__text Дайджест новостей
+									.subscribe__row 
+										input#subscribe_2(type="checkbox").subscribe__checkbox
+										label(for="subscribe_2").subscribe__checkbox-label
+										label(for="subscribe_2").subscribe__text Дайджест рубрики "аналитика" за месяц
+									.subscribe__row 
+										input#subscribe_3(type="checkbox").subscribe__checkbox
+										label(for="subscribe_3").subscribe__checkbox-label
+										label(for="subscribe_3").subscribe__text Дайджест блогов активных пользователей сайта
+								.subscribe__input 
+									input(type="text" placeholder="Ваш Email")
+									button(type="submit").subscribe__btn Подписаться
+							//	/subscribe
+						.col
+							// little-banner
+							.little-banner
+								img(src="img/banner_1.jpg", alt="")
+							//	/little-banner
+
+				.home-s5 
+					.row.row-cols-1.row-cols-lg-3
+						.col
+							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУР Дмитрием Коновым','4 часа назад')
+						.col
+							+little-news('эксклюзив rupec','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад',true)
+						.col
+							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера')
+
+				.home-s2
+					.row.row-cols-1.row-cols-md-2.row-cols-lg-3
+						.col
+							+big-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУР Дмитрием Коновым','4 часа назад','news-thumbnail_1.jpg')
+						.col
+							+comment-news('блоги','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад','portrait_2.jpg','Александр Собко','Аналитик RUPEC')
+						.col
+							// orange-news
+							article.orange-news
+								a(href="#") 
+									h1.orange-news__title “Есть ли жизнь без пластика?”главное из общения в Clubhouse с главой СИБУР Дмитрием Коновым можно приспособить под что угодно
+							//	/orange-news
+
+				.home-s5 
+					.row.row-cols-1.row-cols-lg-3
+						.col
+							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУР Дмитрием Коновым','4 часа назад')
+						.col
+							+little-news('Стратегии отрасли','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад')
+						.col
+							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера')
+
+				// big-banner
+				.big-banner
+					img(src="img/banner_2.jpg", alt="")
+				//	/big-banner
+
+				.home-s5 
+					.row.row-cols-1.row-cols-lg-3
+						.col
+							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУР Дмитрием Коновым','4 часа назад')
+						.col
+							+little-news('Стратегии отрасли','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад')
+						.col
+							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера')
+
+		include blocks/footer.jade
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")

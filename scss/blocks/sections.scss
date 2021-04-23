@@ -1,0 +1,41 @@
+.home-s1 {
+  margin-top: 65px;
+  margin-bottom: 20px;
+  box-shadow: $shadow;
+  background-color: #fff;
+  @include media-breakpoint-down(sm) {
+    .col {
+      margin-bottom: 20px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 20px;
+  }
+}
+
+.home-s2 {
+  .col {
+    margin-bottom: $gutter;
+  }
+}
+
+.home-s3 {
+  margin-bottom: $gutter;
+}
+
+.home-s4 {
+  .col {
+    margin-bottom: $gutter;
+  }
+}
+
+.home-s5 {
+  margin-bottom: 20px;
+  box-shadow: $shadow;
+  background-color: #fff;
+  @include media-breakpoint-down(sm) {
+    .col {
+      margin-bottom: 20px;
+    }
+  }
+}

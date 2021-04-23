@@ -1,0 +1,153 @@
+.comment-news {
+  height: 100%;
+  box-shadow: $shadow;
+  background-color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
+  > a {
+    display: flex;
+    flex-direction: column;
+    color: $black;
+    height: 100%;
+    padding-bottom: 20px;
+  }
+  &:hover {
+    box-shadow: $shadowHov;
+  }
+  &__img {
+    margin-bottom: 63px;
+    &:after {
+      padding-top: 64%;
+    }
+  }
+  &__responsive-block {
+    padding: 0 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__title {
+    padding: 0 30px;
+    margin-bottom: 50px;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: bold;
+    flex-grow: 1;
+    a {
+      color: $black;
+    }
+  }
+  &__time {
+    padding: 0 30px;
+    font-size: 12px;
+    color: $blue;
+    text-transform: uppercase;
+  }
+  &__category {
+    padding: 20px 20px 10px 30px;
+    background-color: $orange;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+  }
+  &__avatar {
+    width: 40%;
+    border: 3px solid $orange;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    &:after {
+      padding-top: 100%;
+    }
+  }
+  &__name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 7px;
+  }
+  &__descript {
+    font-weight: 500;
+  }
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  @include media-breakpoint-down(lg) {
+    &__name {
+      font-size: 16px;
+    }
+    &__descript {
+      font-size: 12px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    &__content {
+      height: auto;
+      display: block;
+      padding: 20px 0 20px 60px;
+      position: relative;
+    }
+    &__category {
+      padding: 14px 20px 10px 5%;
+      margin-bottom: 6px;
+      font-size: 8px;
+      top: -43px;
+    }
+    &__title {
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 13px;
+      line-height: 17px;
+      margin-bottom: 0;
+      flex-grow: 0;
+      margin-bottom: 20px;
+    }
+    &__responsive-block {
+      position: relative;
+      padding: 0 5%;
+    }
+    &__img {
+      padding-top: 43px;
+      margin-bottom: 0;
+      &:after {
+        display: none;
+      }
+    }
+    &__time {
+      padding: 0 5%;
+      position: absolute;
+      top: 14px;
+      right: 0;
+      font-size: 8px;
+    }
+    &__name {
+      display: block;
+      font-size: 13px;
+      color: $orange;
+      margin-bottom: 3px;
+    }
+    &__descript {
+      display: block;
+      font-size: 8px;
+    }
+    &__avatar {
+      width: 44px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0,-50%);
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+mixin big-news(category,title,time,img)
+  // big-news
+  article.big-news
+    a(href="#") 
+      if img
+        .big-news__img.img-responsive
+          img(src="img/" + img, alt="")
+      .big-news__content
+        .big-news__category= category
+        h2.big-news__title!= title
+        .big-news__time= time
+  //	/big-news

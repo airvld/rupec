@@ -1,0 +1,12 @@
+mixin little-news(category,title,time,exclusive)
+  // little-news
+  article.little-news
+    a(href="#") 
+      if exclusive
+        .little-news__category.little-news__category--exclusive= category
+      else
+        .little-news__category= category
+      h2.little-news__title
+        span!= title
+      .little-news__time= time
+  //	/little-news

@@ -1,0 +1,16 @@
+mixin comment-news(category,title,time,img,name,descript)
+  // comment-news
+  article.comment-news
+    a(href="#") 
+      .comment-news__img.img-responsive
+        .comment-news__responsive-block
+          .comment-news__category= category
+          .comment-news__title.mobile-visible!= title
+          .comment-news__content
+            .comment-news__avatar.img-responsive
+              img(src="img/" + img, alt="")
+            .comment-news__name= name
+            .comment-news__descript= descript
+      h2.comment-news__title.mobile-hide!= title
+      .comment-news__time= time
+  //	/comment-news

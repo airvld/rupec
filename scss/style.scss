@@ -1,0 +1,58 @@
+@import 'mixins/mixins'; // Подключение миксинов
+
+@include reset(); // Сброс стилей
+
+// Переменные для кастомизации Bootstrap 4
+$grid-gutter-width: 20px; // Отступы между колонками
+$grid-columns: 12; // Колличество колонок
+$grid-breakpoints: ( // Брэйкпоинты
+  xs: 0, 
+  sm: 576px, 
+  md: 768px, 
+  lg: 992px, 
+  xl: 1300px);
+$container-max-widths: ( // Максимальная ширина контейнера
+  sm: 540px, 
+  md: 720px, 
+  lg: 960px, 
+  xl: 1220px);
+$gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
+
+@import 'bootstrap/bootstrap'; // Подключение бутстрап
+
+// Шрифты
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Regular", normal, normal);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Medium", 500, normal);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-SemiBold", 600, normal);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-ExtraBold", 700, normal);
+
+// Цвета
+$blue: #2073BA;
+$orange: #F57B20;
+$red: #DA4052;
+$green: #009FA6;
+
+// Тень
+$shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+$shadowHov: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+// Подключение файлов
+@import 'blocks/settings';
+@import 'hamburgers/hamburgers';
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/userblock';
+@import 'blocks/sections';
+@import 'blocks/little-news';
+@import 'blocks/big-news';
+@import 'blocks/comment-news';
+@import 'blocks/full-news';
+@import 'blocks/subscribe';
+@import 'blocks/little-banner';
+@import 'blocks/orange-news';
+@import 'blocks/big-banner';
+@import 'blocks/footer';
+@import 'blocks/social';
+// @import 'blocks/modal';
+// @import 'blocks/tooltipster-noir';
+// @import 'blocks/tabs';

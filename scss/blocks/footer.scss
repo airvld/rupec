@@ -1,0 +1,78 @@
+.footer {
+  margin-top: 76px;
+  background-color: #fff;
+  box-shadow: $shadow;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 100px 0 63px;
+    border-bottom: 1px solid $blue;
+  }
+  &__bottom {
+    padding: 22px 0 114px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    font-weight: 500;
+  }
+  &__menu {
+    padding-right: 25px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -34px;
+    font-size: 11px;
+    font-weight: bold;
+    li {
+      margin-left: 34px;
+    }
+    a {
+      display: block;
+      padding: 10px 0;
+      color: $black;
+      white-space: nowrap;
+      &:hover {
+        color: $blue;
+      }
+    }  
+  }
+  &__copyright {
+    span {
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 50px;
+    &__top {
+      padding: 30px 0 15px;
+      border-bottom: none;
+    }
+    &__bottom {
+      padding: 15px 0 30px;
+    }
+    &__copyright {
+      font-size: 8px;
+      line-height: 12px;
+      span {
+        display: block;
+      }
+    }
+    &__menu {
+      padding-right: 0;
+    }
+    &__list {
+      font-size: 8px;
+      margin-left: -20px;
+      li {
+        margin-left: 20px;
+      }
+    }
+    .logo {
+      svg {
+        max-width: 65px;
+        max-height: 16px;
+      }
+    }
+  }
+}

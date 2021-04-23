@@ -1,0 +1,125 @@
+.full-news {
+  background-color: #fff;
+  box-shadow: $shadow;
+  transition: 0.5s;
+  a {
+    color: $black;
+  }
+  &:hover {
+    box-shadow: $shadowHov;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__col {
+    &--1 {
+      width: 67.7%;
+    }
+    &--2 {
+      width: 32.3%;
+      padding: 0 30px 25px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+  }
+  &__img {
+    display: block;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+  &__category {
+    align-self: flex-start;
+    padding: 20px 20px 10px 30px;
+    margin-left: -30px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: $blue;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  &__title {
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  &__text {
+    flex-grow: 1;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  &__time {
+    font-size: 12px;
+    font-weight: 600;
+    color: $blue;
+  }
+  @include media-breakpoint-down(md) {
+    &__col {
+      &--1 {
+        width: 50%;
+      }
+      &--2 {
+        width: 50%;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__col {
+      &--1 {
+        width: 100%;
+      }
+      &--2 {
+        width: 100%;
+      }
+    }
+    &__text {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    &__col {
+      &--2 {
+        padding: 0 5% 20px;
+      }
+    }
+    &__category {
+      padding: 14px 20px 10px 5%;
+      margin-bottom: 6px;
+      font-size: 8px;
+    }
+    &__title {
+      font-size: 13px;
+      line-height: 17px;
+      margin-bottom: 0;
+    }
+    &__time {
+      padding: 0 5%;
+      position: absolute;
+      top: 14px;
+      right: 0;
+      font-size: 8px;
+    }
+    &__img {
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        padding-top: 40%;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

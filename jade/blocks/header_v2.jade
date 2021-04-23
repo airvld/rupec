@@ -1,0 +1,109 @@
+// header
+header.header#header
+	.header__box-shadow
+		.container
+			.header__container
+
+				.header__col
+
+					.js-drop-click.header__menu-btn(data-id="#menu")
+						img(src="img/hamburger-icon.svg", alt="")
+				
+					a(href="#").logo
+						img(src="img/logo.svg", alt="")
+
+					.header__menu
+						nav.header__nav
+							ul.header__list
+								li
+									a(href="#").blue Новости
+								li
+									a(href="#").green Исследования
+								li
+									a(href="#").orange Сообщество
+								li
+									a(href="#").gray Библиотека
+								li
+									a(href="#").gray Спецпроекты
+								li
+									a(href="#").gray Календарь
+
+					.js-drop-click.header__search-icon(data-id="#menu-search")
+						img(src="img/zoom-icon.svg", alt="")
+
+				// userblock
+				.userblock
+					form(action="#").userblock__search
+						input(type="text" placeholder="Поиск по сайту")
+					.btn.btn--blue Вход
+				//	/userblock
+
+	// menu
+	#menu.menu
+		.container
+			nav#mmenu.menu__nav
+				ul.menu__list
+					li
+						a(href="#") Главная
+					li
+						a(href="#") Новости
+					li
+						a(href="#") Исследования
+					li
+						a(href="#") Сообщество
+					li
+						a(href="#") Библиотека
+					li
+						a(href="#") Спецпроекты
+				ul.menu__list
+					li
+						a(href="#") Вход
+					li
+						a(href="#") Регистрация
+	// /menu
+
+	// menu
+	#menu-search.menu.menu--search
+		.container
+			nav.menu__nav
+				ul.menu__list
+					li
+						a(href="#") Поиск по дате
+					li
+						a(href="#") Стратеги и отрасли
+					li
+						a(href="#") Госрегулирование
+					li
+						a(href="#") Финансы и инвестиции
+					li
+						a(href="#") шины
+					li
+						a(href="#") газопереработка
+					li
+						a(href="#") нефтепереработка
+					li
+						a(href="#") полимеры
+					li
+						a(href="#") синтетические каучуки
+					li
+						a(href="#") наука и технологии
+					li
+						a(href="#") органический синтез
+					li
+						a(href="#") Переработка полимеров
+					li
+						a(href="#") азотные удобрения
+					li
+						a(href="#") синтетические волокна
+					li
+						a(href="#") вторпереработка
+					li
+						a(href="#") химическое машиностроение
+					li
+						a(href="#") малотоннажная и спецхимия
+					li
+						a(href="#") инфраструктура
+				.menu__close
+	// /menu
+
+// /header
